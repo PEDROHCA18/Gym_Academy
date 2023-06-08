@@ -11,6 +11,7 @@
     --branco: #fff;
     /* --corimgheader:rgba(255, 66, 0, 0.2) 86.28%; */
     --corimgheader:rgba(255, 66, 0, 0.2) ;
+    --cinza-branco:#a0a0a0;
 }
 
 .laranja {
@@ -88,67 +89,160 @@ body {
 
 
 /* ----------------- header -------------------- */
-
-.menuprincipal {
-    background-color: var(--cinza);
-    padding: 30px;
-}
-
-.menuprincipal .container {
+nav {
     display: flex;
-    justify-content: space-between; 
-    height: 40px;
+    /*Jogar os itens para o canto da página*/
+    justify-content: space-around;
     align-items: center;
-}
+    min-height: 8vh;
+    /*Mudando a cor de fundo do menu*/
+    background-color: var(--cinza);
+    /*Fonte do menu*/
+    font-family: 'Poppins', sans-serif;
+  }
 
-.menuprincipal .container ul {
+  .logo {
+    /*Mudando a cor da fonte do nome*/
+    color: white;
+    /*Deixando o texto formatado*/
+    text-transform: uppercase;
+    /*Mudando o espaçamento das letras*/
+    letter-spacing: 5px;
+    /*Tamaho da letra*/
+    font-size: 20px;
+    margin-top: 30px;
+
+  }
+
+  .nav-links {
+    /*Ajustando o tamanho e posição dos itens*/
     display: flex;
-    gap: 15px;
+    justify-content: space-around;
+    width: 40%;
+
+  }
+
+  .nav-links li {
+    /*Sumindo com os pontos que ficavam nos itens*/
     list-style: none;
-}
-
-.menuprincipal h1 {
-    font-size: 28px;
-    color: var(--branco);
-}
 
 
-.menuprincipal ul li a {
-    font-size: 18px;
+  }
+
+  .nav-links a {
+    /*Mudando a cor dos itens*/
+    color: white;
+    /*Mudando o espaçamento das letras dos itens*/
     text-decoration: none;
-    color: var(--laranja);
-    position: relative;
-}
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
 
-.menuprincipal ul li a:hover {
-    color: var(--branco);
-    transition: 0.3s;
-}
+  .burger {
+    /*Não deixando o menu hambuguer visivel */
+    display: none;
+    /*aparecendo a maozinha quando clica no menu hambuguer*/
+    cursor: pointer;
+  }
+
+  .burger div {
+    /*Ajeitando o menu Hambuguer*/
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /*Ajustando a altura*/
+  @media screen and (max-width:1024px) {
+    .nav-links {
+      width: 60%;
+    }
+  }
+
+  /*Ajustando a altura minima*/
+  @media screen and (max-width:768px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    /*ajustando os itens para se adequar a altura min.*/
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      /*Arrumando o menu hambuguer*/
+      background-color: var(--cinza);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      /*Ajeitando a transição parar abrir o menu hambuguer*/
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+      opacity: 0;
+    }
+
+    .burger {
+      /*para aparecer o menu hambuguer quando a tela tiver pequena*/
+      display: block;
+    }
+  }
+
+  /*Quando se clica no menu hambuguer, consegue abrir os itens*/
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /*Animações quando se clica no menu hamburguer*/
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  /*Transformando o menu em X*/
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 
 
-.menuprincipal ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 0.2rem;
-    background-color: var(--laranja);
-    top: 22px;
-    left: 0;
-    transition: 0.25s;
-}
+  @media screen and (max-width: 768px) {
+    .nav-links.nav-active li {
+      opacity: 1;
+    }
+  }
 
-.menuprincipal ul li a:hover::after {
-    width: 100%;
-}
 
 /*  ----------------- section inicio ------------------- */
 
 .inicio {
-    /* height: 100vh; */
+     height: 100vh; 
     width: 100%;
-    padding: 300px 20px;
+    padding: 200px 20px;
     /* background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, rgba(255, 66, 0, 0.2) 86.28%), url(img/header.jpg) no-repeat center; */
-    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/header.jpg) no-repeat center;
+    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/pngwing.com\(5\).png) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -224,7 +318,8 @@ body {
     font-size: 32px;
     color: var(--branco);
     text-align: center;
-    
+    border: 2px solid white;
+    padding: 10px;
 }
 
 h3{
@@ -233,7 +328,10 @@ h3{
     color: var(--branco);
     text-align: center;
     
+    
 }
+
+
 .tabelacor{
     background-color: var(--cinza-claro);
 }
@@ -259,7 +357,9 @@ table {
   th {
     background-color: #f2f2f2;
   }
-
+td {
+  background-color: var(--cinza-branco);
+}
   tr:hover {
     background-color: #f5f5f5;
   }
@@ -341,4 +441,14 @@ footer{
         flex-direction: column;
     }
     
+}
+p{
+    align-items: center;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  /* Estilos para dispositivos móveis */
+  .tabelacor, .tabelacor2, .h1-principal-branco{
+      margin: 10px;
+  }
 }

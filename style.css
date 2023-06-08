@@ -89,58 +89,6 @@ body {
 
 /* ----------------- header -------------------- */
 
-.menuprincipal {
-    background-color: var(--cinza);
-    padding: 30px;
-}
-
-.menuprincipal .container {
-    display: flex;
-    justify-content: space-between; 
-    height: 40px;
-    align-items: center;
-}
-
-.menuprincipal .container ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-.menuprincipal h1 {
-    font-size: 28px;
-    color: var(--branco);
-}
-
-
-.menuprincipal ul li a {
-    font-size: 18px;
-    text-decoration: none;
-    color: var(--laranja);
-    position: relative;
-}
-
-.menuprincipal ul li a:hover {
-    color: var(--branco);
-    transition: 0.3s;
-}
-
-
-.menuprincipal ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 0.2rem;
-    background-color: var(--laranja);
-    top: 22px;
-    left: 0;
-    transition: 0.25s;
-}
-
-.menuprincipal ul li a:hover::after {
-    width: 100%;
-}
-
 /*  ----------------- section inicio ------------------- */
 
 .inicio {
@@ -324,4 +272,8 @@ footer{
 .cardlink{
     text-decoration: none;
     color: black;
+}
+contatos, p{
+    align-items: center;
+    text-align: center;
 }

@@ -13,26 +13,64 @@
 <body>
 
     <header>
-        <nav class="menuprincipal container-fluid">
-            <div class="container">
-                <h1><span class="laranja">GYM</span>ACADEMY</h1>
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="#tabelam">TABELA MASCULINA</a></li>
-                    <li><a href="#tabelaf">TABELA FEMININA</a></li>
-                    <li><a href="#Contato">CONTATO</a></li>
-                </ul>
-            </div>
-        </nav>
+        
+<!--Menu responsivo-->
+
+
+<nav>
+    <div class="logo" id="inicio">
+      <h3><span class="laranja">GYM</span> ACADEMY</h3>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tabelam">Tabela Masculina</a></li>
+      <li><a href="#tabelaf">Tabela Feminina</a></li>
+      <li><a href="#contato">Contatos</a></li>
+    </ul>
+    <!--Menu hambuguer-->
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  
+</body>
+
+<script>
+  const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    //Fazendo aparecer os itens
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    //Fazendo o clique do menu funcionar
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+
+      //Animações links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
+
+        }
+      });
+      //Transformando em X
+      burger.classList.toggle('toggle');
+
+
+    });
+
+  }
+  navSlide();
+  </script>
 
         <section class="inicio container-fluid">
 
-            <div class="container">
-                <h2>Ajudamos você a <br> tirar dúvidas sobre</h2>
-                <h1>MUSCULAÇÃO</h1>
-                <a href="">COMEÇAR AGORA</a>
-                
-            </div>
+          
 
         </section>
     </header>
@@ -42,7 +80,7 @@
             <h1 class="h1-principal-laranja">SOBRE A TABELA DE TREINO</h1>
             <div class="row">
                 <div class="col-6">
-                    <img src="img/homem.png" width="100%" alt="imagem de um homem segurando pesos">
+                    <img src="./img/pngwing.com(1).png" width="100%" alt="imagem de um homem segurando pesos">
                 </div>
                 <div class="col-6 sobre-conteudo">
                     <p><span class="laranja">A Tabela </span><span class="cinza-claro">de Treino</span> é uma ferramenta usada para 
@@ -64,7 +102,7 @@
                 <div class="tabelacor">
                 <table>
                 <h3> Segunda - Peito e tríceps </h3>
-               
+            
                     <tr>
                       <th>Exercício</th>
                       <th>Séries</th>
@@ -88,7 +126,7 @@
                     <tr>
                         <td>Tríceps apoiado no banco</td>
                         <td>3</td>
-                        <td>1</td>
+                        <td>10</td>
                     </tr>
 
                      <tr>
@@ -548,21 +586,9 @@
             </div>
         </section>
 
-        <section class="container" id="Equipe">
-            <h1 class="h1-principal-laranja">Conheça Nossa Equipe</h1>
-            <div class="row">
-                <div class="col-6">
-                    <img src="img/Programmer.jpg" width="100%" alt="imagem de um notbook com uma ferramenta de programação">
-                </div>
-                <div class="col-6 sobre-conteudo">
-                    <p>A plataforma Gym Academy surgiu diante de um Trabalho universitário. <br>E foi Desenvolvida por <span class="laranja">Vitor Ricardo</span> e <span class="laranja">Pedro Henrique</span></p>
-                </div>
-            </div>
-        </section>
-    
     </main>
 
-    <footer class="Contato">
+    <footer class="Contato" id="contato">
         <div class="Contatos">
             <p>Entre em contato conosco <br>Email: <span class="laranja">gymacademy2023@gmail.com</span></p>
         </div>
