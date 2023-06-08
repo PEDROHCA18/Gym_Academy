@@ -11,6 +11,7 @@
     --branco: #fff;
     /* --corimgheader:rgba(255, 66, 0, 0.2) 86.28%; */
     --corimgheader:rgba(255, 66, 0, 0.2) ;
+    --cinza-branco:#a0a0a0;
 }
 
 .laranja {
@@ -88,15 +89,160 @@ body {
 
 
 /* ----------------- header -------------------- */
+nav {
+    display: flex;
+    /*Jogar os itens para o canto da página*/
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    /*Mudando a cor de fundo do menu*/
+    background-color: var(--cinza);
+    /*Fonte do menu*/
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .logo {
+    /*Mudando a cor da fonte do nome*/
+    color: white;
+    /*Deixando o texto formatado*/
+    text-transform: uppercase;
+    /*Mudando o espaçamento das letras*/
+    letter-spacing: 5px;
+    /*Tamaho da letra*/
+    font-size: 20px;
+    margin-top: 30px;
+
+  }
+
+  .nav-links {
+    /*Ajustando o tamanho e posição dos itens*/
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+
+  }
+
+  .nav-links li {
+    /*Sumindo com os pontos que ficavam nos itens*/
+    list-style: none;
+
+
+  }
+
+  .nav-links a {
+    /*Mudando a cor dos itens*/
+    color: white;
+    /*Mudando o espaçamento das letras dos itens*/
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .burger {
+    /*Não deixando o menu hambuguer visivel */
+    display: none;
+    /*aparecendo a maozinha quando clica no menu hambuguer*/
+    cursor: pointer;
+  }
+
+  .burger div {
+    /*Ajeitando o menu Hambuguer*/
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /*Ajustando a altura*/
+  @media screen and (max-width:1024px) {
+    .nav-links {
+      width: 60%;
+    }
+  }
+
+  /*Ajustando a altura minima*/
+  @media screen and (max-width:768px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    /*ajustando os itens para se adequar a altura min.*/
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      /*Arrumando o menu hambuguer*/
+      background-color: var(--cinza);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      /*Ajeitando a transição parar abrir o menu hambuguer*/
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+      opacity: 0;
+    }
+
+    .burger {
+      /*para aparecer o menu hambuguer quando a tela tiver pequena*/
+      display: block;
+    }
+  }
+
+  /*Quando se clica no menu hambuguer, consegue abrir os itens*/
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /*Animações quando se clica no menu hamburguer*/
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  /*Transformando o menu em X*/
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .nav-links.nav-active li {
+      opacity: 1;
+    }
+  }
+
 
 /*  ----------------- section inicio ------------------- */
 
 .inicio {
-    /* height: 100vh; */
+     height: 100vh; 
     width: 100%;
-    padding: 300px 20px;
+    padding: 200px 20px;
     /* background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, rgba(255, 66, 0, 0.2) 86.28%), url(img/header.jpg) no-repeat center; */
-    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/header.jpg) no-repeat center;
+    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/pngwing.com\(5\).png) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -166,41 +312,69 @@ body {
     padding: 80px 0;
 }
 
+
 .h1-principal-branco {
     margin-bottom: 40px;
     font-size: 32px;
     color: var(--branco);
     text-align: center;
+    border: 2px solid white;
+    padding: 10px;
 }
 
-#informacoes .card {
-    background-color: var(--branco);
-    padding: 80px 30px;
+h3{
+    margin-bottom: 40px;
+    font-size: 25px;
+    color: var(--branco);
     text-align: center;
-    border-radius: 12px;
-    min-height: 100%;
+    
+    
 }
 
-#informacoes .card:hover {
-    background-color: var(--cinza);
-    color: #fff;
-    transition: 0.35s;
-    cursor: pointer;
+
+.tabelacor{
+    background-color: var(--cinza-claro);
+}
+.tabelacor2{
+    background-color: var(--cinza-claro);
+    margin-bottom: 75px;
 }
 
-#informacoes .card .icone {
-    font-size: 60px;
-    color: var(--laranja);
-}
+table {
+    margin-bottom: 25px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--branco);
+    
+  }
 
-#informacoes .card h1 {
-    margin: 20px 0;
-    font-size: 28px;
-}
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
 
-#informacoes .card p {
-    font-size: 22px;
+  th {
+    background-color: #f2f2f2;
+  }
+td {
+  background-color: var(--cinza-branco);
 }
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 /* ------------ Rodapé --------------------- */
 
@@ -268,12 +442,13 @@ footer{
     }
     
 }
-/* tirar a marca do link dos cardios*/
-.cardlink{
-    text-decoration: none;
-    color: black;
-}
-contatos, p{
+p{
     align-items: center;
     text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  /* Estilos para dispositivos móveis */
+  .tabelacor, .tabelacor2, .h1-principal-branco{
+      margin: 10px;
+  }
 }

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tabela.css">
+    <title>Gym Academy</title>
+</head>
+
+<body>
+
+    <header>
+        
+<!--Menu responsivo-->
+
+
+<nav>
+    <div class="logo" id="inicio">
+      <h3><span class="laranja">GYM</span> ACADEMY</h3>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tabelam">Tabela Masculina</a></li>
+      <li><a href="#tabelaf">Tabela Feminina</a></li>
+      <li><a href="#contato">Contatos</a></li>
+    </ul>
+    <!--Menu hambuguer-->
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  
+</body>
+
+<script>
+  const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    //Fazendo aparecer os itens
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    //Fazendo o clique do menu funcionar
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+
+      //Animações links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
+
+        }
+      });
+      //Transformando em X
+      burger.classList.toggle('toggle');
+
+
+    });
+
+  }
+  navSlide();
+  </script>
+
+        <section class="inicio container-fluid">
+
+          
+
+        </section>
+    </header>
+
+    <main>
+        <section class="container" id="sobre">
+            <h1 class="h1-principal-laranja">SOBRE A TABELA DE TREINO</h1>
+            <div class="row">
+                <div class="col-6">
+                    <img src="./img/pngwing.com(1).png" width="100%" alt="imagem de um homem segurando pesos">
+                </div>
+                <div class="col-6 sobre-conteudo">
+                    <p><span class="laranja">A Tabela </span><span class="cinza-claro">de Treino</span> é uma ferramenta usada para 
+                        planejar e organizar os exercícios, séries e 
+                        repetições a serem realizados durante um programa de treinamento de musculação.</p> 
+
+                    <p> Ela é projetada para ajudar os indivíduos a alcançarem seus objetivos de condicionamento físico, 
+                        como ganho de força, hipertrofia muscular ou perda de gordura.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid" id="informacoes">
+            <div class="container">
+                <section id="tabelam">
+                <h1 class="h1-principal-branco">Tabela Masculina</h1>
+                </section>
+
+                <div class="tabelacor">
+                <table>
+                <h3> Segunda - Peito e tríceps </h3>
+            
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Supino reto com barra</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Supino inclinado com barra</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Crucifixo na máquina</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Tríceps apoiado no banco</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Tríceps na polia alta com barra reta</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Tríceps na polia alta com corda</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tabelacor">
+            <table>
+            <h3> Terça - Costa e Bíceps </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Puxada com barra no purlley</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Puxada pela frente com triângulo no purlley</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Remada na máquina de cabos</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps direta com barra</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Rosca bíceps martelo em pé com halteres</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Rosca bíceps no cabo usando a corda</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+
+                <div class="tabelacor">
+            <table>
+            <h3> Quarta - Pernas </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Agachamento</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Extensora</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Leg press</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Flexora deitada</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Cadeira abdutora</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Panturrilhas</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+
+                 <div class="tabelacor">
+                <table>
+                <h3> Quinta - Peito e tríceps/ombros </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Supino reto com barra</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Supino inclinado com barra</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Crucifixo na máquina</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Tríceps apoiado no banco</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Tríceps na polia alta com barra reta</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Tríceps na polia alta com corda</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação lateral com halteres</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação frontal com halteres</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </div>
+
+               <div class="tabelacor2">
+                <table>
+            <h3> Sexta - Costa e Bíceps/Antebraços </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Puxada com barra no purlley</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Puxada pela frente com triângulo no purlley</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Remada na máquina de cabos</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps direta com barra W</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps unilateral com halteres</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps martelo em pé com halteres</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     
+                     <tr>
+                        <td>Rosca de Punhos</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Rosca inversa</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+
+
+<section id="tabelaf">
+                 <h1 class="h1-principal-branco">Tabela Feminina</h1>
+</section>
+                <div class="tabelacor">
+                <table>
+                <h3> Segunda - Quadríceps e Glúteos </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Agachamento</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg press</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Extensora</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação pélvica</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Agachamento sumô</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Extensão de quadril coice no cross</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </div>
+
+             <div class="tabelacor">
+                <table>
+                <h3> Terça - Peito e tríceps/ombros </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Supino reto com barra</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Supino inclinado com barra</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Peck deck</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Tríceps apoiado no banco</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+
+                     <tr>
+                        <td>Tríceps na polia alta com barra reta</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Tríceps na polia alta com corda</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação lateral com halteres</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação frontal com halteres</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tabelacor">
+                <table>
+                <h3> Quarta - Posteriores e Glúteos </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Agachamento</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg press</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Flexora deitada</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Stiff</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Elevação pélvica</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Agachamento sumô</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Extensão de quadril coice no cross</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Panturrilha</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tabelacor">
+                <table>
+            <h3> Quinta - Costa e Bíceps/Antebraços </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Puxada com barra no purlley</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Puxada pela frente com triângulo no purlley</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Remada na máquina de cabos</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps direta com barra W</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                      <tr>
+                        <td>Rosca bíceps unilateral com halteres</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Rosca bíceps martelo em pé com halteres</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Rosca de Punhos</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Rosca inversa</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+
+                 <div class="tabelacor2">
+            <table>
+            <h3> Sexta - Pernas </h3>
+               
+                    <tr>
+                      <th>Exercício</th>
+                      <th>Séries</th>
+                      <th>Repetições</th>
+                    </tr>
+                    <tr>
+                        <td>Agachamento</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Extensora</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                     <tr>
+                        <td>Leg press</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Flexora deitada</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+
+                     <tr>
+                        <td>Cadeira abdutora</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                     <tr>
+                        <td>Panturrilhas</td>
+                        <td>4</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="Contato" id="contato">
+        <div class="Contatos">
+            <p>Entre em contato conosco <br>Email: <span class="laranja">gymacademy2023@gmail.com</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

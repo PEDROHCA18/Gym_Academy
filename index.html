@@ -7,30 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="./script.js"></script>
     <title>Gym Academy</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="menuprincipal container-fluid">
-            <div class="container">
-                <h1><span class="laranja">GYM</span>ACADEMY</h1>
-                <ul>
-                    <li><a href="#Inicio">INICIO</a></li>
-                    <li><a href="#sobre">INFORMAÇÕES</a></li>
-                    <li><a href="#equipe">EQUIPE</a></li>
-                    <li><a href="#Contato">CONTATO</a></li>
-                </ul>
-            </div>
-        </nav>
+       
+  
 
+
+<!--Menu responsivo-->
+
+
+  <nav>
+    <div class="logo" id="inicio">
+      <h3><span class="laranja">GYM</span> ACADEMY</h3>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#informacoes">Informações</a></li>
+      <li><a href="#contato">Contatos</a></li>
+    </ul>
+    <!--Menu hambuguer-->
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <script src="javs/app.js"></script>
+
+</body>
+
+<script>
+  const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    //Fazendo aparecer os itens
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    //Fazendo o clique do menu funcionar
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+
+      //Animações links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
+
+        }
+      });
+      //Transformando em X
+      burger.classList.toggle('toggle');
+
+
+    });
+
+
+  }
+
+  navSlide();
+</script>
         <section class="inicio container-fluid">
 
             <div class="container">
                 <h2>Ajudamos você a <br> tirar dúvidas sobre</h2>
                 <h1>MUSCULAÇÃO</h1>
-                <a href="">COMEÇAR AGORA</a>
+                <a href="#informacoes">COMEÇAR AGORA</a>
                 
             </div>
 
@@ -84,11 +134,13 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card">
-                            <span class="icone"><i class="fa-solid fa-table"></i></span>
+                        <a href="tabela.html" class="cardlink"><div class="card">
+                            <span class="icone" ><i class="fa-solid fa-table"></i></span>
                             <h1>TABELA DE TREINO</h1>
-                            <p>Monte sua tabela de Treino</p>
+                            <p>Tabela de treino para iniciantes</p>
+                            
                         </div>
+                        </a>
                     </div>
               
             
@@ -96,21 +148,10 @@
             </div>
         </section>
 
-        <section class="container" id="Equipe">
-            <h1 class="h1-principal-laranja">Conheça Nossa Equipe</h1>
-            <div class="row">
-                <div class="col-6">
-                    <img src="img/Programmer.jpg" width="100%" alt="imagem de um notbook com uma ferramenta de programação">
-                </div>
-                <div class="col-6 sobre-conteudo">
-                    <p>A plataforma Gym Academy surgiu diante de um Trabalho universitário. <br>E foi Desenvolvida por <span class="laranja">Vitor Ricardo</span> e <span class="laranja">Pedro Henrique</span></p>
-                </div>
-            </div>
-        </section>
-    
+
     </main>
 
-    <footer class="Contato">
+    <footer class="Contato" id="contato">
         <div class="Contatos">
             <p>Entre em contato conosco <br>Email: <span class="laranja">gymacademy2023@gmail.com</span></p>
         </div>
