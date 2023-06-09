@@ -67,7 +67,6 @@ header .btn {
     position: fixed;
     flex-direction: column;
     min-width: 300px;
-    height: 100vh;
    background-color: var(--cinza);
     top: 0;
     right: -100%;
