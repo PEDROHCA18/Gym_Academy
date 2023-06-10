@@ -7,68 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="tabela.css">
+    
     <title>Gym Academy</title>
 </head>
 
-<body>
-
-    <header>
+<header> 
+    
+     <h1 class="titulo" ><span class="laranja">GYM</span> ACADEMY</h1>
+     
+      <nav class="navbar">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
         
-<!--Menu responsivo-->
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#tabelam">Tabela Masculina</a>
+        <a href="#tabelaf">Tabela Feminina</a>
+        <a href="#contato">Contatos</a>
+      </nav>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+      </header>
 
+    
+    <script> 
+      let menus = document.querySelector(".navbar");
+let menus_btn = document.querySelector(".menu-btn");
+let close_btn = document.querySelector(".close-btn");
 
-<nav>
-    <div class="logo" id="inicio">
-      <h3><span class="laranja">GYM</span> ACADEMY</h3>
-    </div>
+menus_btn.addEventListener("click", function () {
+  menus.classList.add("active2");
+});
 
-    <ul class="nav-links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#tabelam">Tabela Masculina</a></li>
-      <li><a href="#tabelaf">Tabela Feminina</a></li>
-      <li><a href="#contato">Contatos</a></li>
-    </ul>
-    <!--Menu hambuguer-->
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-  </nav>
-  
-</body>
+close_btn.addEventListener("click", function () {
+  menus.classList.remove("active2");
+});
+    </script>
 
-<script>
-  const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    //Fazendo aparecer os itens
-    const navLinks = document.querySelectorAll('.nav-links li');
-
-    //Fazendo o clique do menu funcionar
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('nav-active');
-
-      //Animações links
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = '';
-        } else {
-          link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`
-
-        }
-      });
-      //Transformando em X
-      burger.classList.toggle('toggle');
-
-
-    });
-
-  }
-  navSlide();
-  </script>
-
-        <section class="inicio container-fluid">
+        <section class="inicio container-fluid" id="inicio">
 
           
 
