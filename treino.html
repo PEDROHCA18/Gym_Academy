@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="treino.css">
+    <script src="./script.js"></script>
+    <title>Treinos</title>
+</head>
+
+
+<header> 
+    
+     <h1 class="titulo" ><span class="laranja">GYM</span> ACADEMY</h1>
+     
+      <nav class="navbar">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#informacoes">Informações</a>
+        <a href="#contato">Contatos</a>
+      </nav>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+      </header>
+
+    
+    <script> 
+      let menus = document.querySelector(".navbar");
+let menus_btn = document.querySelector(".menu-btn");
+let close_btn = document.querySelector(".close-btn");
+
+menus_btn.addEventListener("click", function () {
+  menus.classList.add("active2");
+});
+
+close_btn.addEventListener("click", function () {
+  menus.classList.remove("active2");
+});
+    </script>
+
+ 
+        <section class="inicio container-fluid" id="inicio">
+
+            <div class="container">
+                <h2>Ajudamos você a <br> tirar dúvidas sobre</h2>
+                <h1>MUSCULAÇÃO</h1>
+                <a href="#informacoes">COMEÇAR AGORA</a>
+                
+            </div >
+
+        </section>
+    
+
+    <main>
+        
+        <section class="container" id="sobre">
+            <h1 class="h1-principal-laranja">SOBRE O TREINO</h1>
+            <div class="row">
+                <div class="col-6">
+                    <img src="img/treino.png" width="70%" alt="imagem de um homem">
+                </div>
+                <div class="col-6 sobre-conteudo">
+                    <p><span class="cinza-claro">O </span><span class="laranja">Treino</span> de musculação é 
+                        um programa de exercícios voltado para o desenvolvimento e fortalecimento dos músculos 
+                        do corpo. </p> 
+
+                    <p>Ele utiliza pesos, máquinas de musculação e exercícios com 
+                        o peso corporal para criar resistência e estimular o crescimento muscular.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid" id="informacoes">
+            <div class="container">
+                <h1 class="h1-principal-branco">TREINOS</h1>
+
+                <div class="row">
+                   
+                    <div class="col-7">
+                        <div class="card">
+                            <div class="borda">
+                            <h1 class="nresp">Peito</h1>
+                            
+                            <p class="parad">O treino de peito é uma parte importante do treinamento de força e 
+                                musculação, focado no desenvolvimento dos músculos do peitoral maior e peitoral 
+                                menor. Um treino de peito ajuda a fortalecer os músculos do tórax, melhorar
+                                 a postura, aumentar a estabilidade dos ombros e proporcionar uma aparência física mais definida. </p>
+</div>
+<div class="divisao">
+                            <h2 class="nometreino">Flexões</h2>
+                            <p class="parad">Posicione-se no chão de bruços, com as palmas das mãos apoiadas 
+                                no chão na largura dos ombros e os dedos apontados para a frente. <br>
+
+                Estenda as pernas 
+                 para trás, mantendo os pés juntos, formando uma linha reta da cabeça aos calcanhares.      <br>
+
+Contraia os músculos abdominais e glúteos. <br>
+
+Abaixe lentamente o corpo, dobrando os cotovelos, mantendo-os próximos ao corpo. <br>
+
+Continue abaixando até que seu peito esteja a poucos centímetros do chão 
+ou sinta uma leve tensão nos músculos do peito e braços. <br>
+
+Pause brevemente e, em seguida, empurre o corpo de volta à posição inicial, estendendo os braços completamente.</p>
+                           <img src="gif/peito/flexoes.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+                            <div class="divisao">
+                            <h2 class="nometreino">Supino reto com barra</h2>
+                            <p class="parad">Deite-se em um banco plano, com os pés apoiados no chão.
+
+Segure a barra com as mãos um pouco mais afastadas do que a largura dos ombros. <br>
+
+Retire a barra do suporte, mantendo os braços estendidos. <br>
+
+Abaixe a barra lentamente em direção ao peito, flexionando os cotovelos. <br>
+
+Pare quando a barra tocar levemente o peito. <br>
+
+Empurre a barra de volta à posição inicial, estendendo os braços. <br>
+
+Repita o movimento por várias repetições, mantendo a forma correta e controlada.</p>
+                           <img src="gif/peito/retocombarra.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+                             <div class="divisao">
+                            <h2 class="nometreino">Supino reto com halteres</h2>
+                            <p class="parad">Deite-se em um banco plano, segurando um haltere em cada mão. <br>
+
+Posicione os alteres acima do peito, com os braços estendidos e as palmas das mãos voltadas para a frente. <br>
+
+Abaixe os alteres lentamente em direção ao peito, flexionando os cotovelos. <br>
+
+Pare quando os alteres estiverem próximos ao peito. <br>
+
+Empurre os alteres de volta à posição inicial, estendendo os braços. <br>
+
+Repita o movimento por várias repetições, mantendo a forma correta e controlada. <br>
+
+Repita o movimento por várias repetições, mantendo a forma correta e controlada.</p>
+                           <img src="gif/peito/retocomhalteres.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+                            <div class="divisao">
+                            <h2 class="nometreino">Supino inclinado com barra</h2>
+                            <p class="parad">Posicione-se em um banco inclinado a um ângulo de 30 a 45 graus. <br>
+
+Pegue a barra com uma pegada ligeiramente mais ampla que a largura 
+dos ombros, com as palmas das mãos voltadas para a frente. <br>
+
+Retire a barra dos suportes e posicione-a acima do peito com os braços estendidos. <br>
+
+Mantendo os ombros recuados e as escápulas puxadas para trás, abaixe lentamente 
+a barra em direção ao peito, mantendo os cotovelos ligeiramente dobrados. <br>
+
+Quando a barra estiver próxima ao peito, empurre-a de volta à posição inicial, estendendo os braços. <br>
+
+Repita o movimento por várias repetições, mantendo a forma adequada e controlando o peso.</p>
+                           <img src="gif/peito/inclinadocombara.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+                            <div class="divisao">
+                            <h2 class="nometreino">Supino inclinado com halteres</h2>
+                            <p class="parad">Escolha um banco inclinado com um ângulo de inclinação de cerca de 30 a
+                                 45 graus. <br>
+
+Segure um halter em cada mão, com as palmas das mãos voltadas para a frente. <br>
+
+Deite-se no banco inclinado, com as costas apoiadas e os pés firmemente plantados no chão. <br>
+
+Mantendo os ombros recuados e as escápulas puxadas para trás, empurre os halteres para 
+cima, estendendo os braços acima do peito. <br>
+
+Lentamente, abaixe os halteres em direção ao peito, flexionando os cotovelos. <br>
+
+Continue abaixando os halteres até que fiquem ligeiramente acima do peito, sentindo um alongamento no peitoral. <br>
+
+Empurre os halteres de volta à posição inicial, estendendo os braços acima do peito, 
+concentrando-se na contração dos músculos do peitoral e dos ombros. <br>
+
+Repita o movimento por várias repetições, mantendo a forma adequada e controlando o peso.</p>
+                           <img src="gif/peito/inclinadocomalteres.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+                            <div class="divisao">
+                            <h2 class="nometreino">Peck Deck</h2>
+                            <p class="parad">Sente-se no Peck Deck com as costas retas e ajuste a altura
+                                 do assento de acordo com a posição dos seus ombros. <br>
+
+Posicione os antebraços e os cotovelos nas almofadas laterais e segure as alças. <br>
+
+Mantendo os pés apoiados no chão e as costas retas, empurre as almofadas juntas à sua frente,
+ realizando um movimento de abdução dos braços. <br>
+
+Contraia os músculos do peitoral enquanto empurra as almofadas juntas. Segure a posição por 
+um breve momento para uma contração máxima. <br>
+
+Retorne lentamente à posição inicial, permitindo que os braços se abram novamente, sem exagerar no alongamento. <br>
+
+Repita o movimento por várias repetições, mantendo a forma adequada e controlando a carga.</p>
+                           <img src="gif/peito/peckdeck.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-7">
+                        <div class="card">
+                            <h1 class="nresp">Peito</h1>
+                           
+                            
+                            
+
+                            <p class="pdividi">O treino de peito é uma parte importante do treinamento de força e 
+                                musculação, focado no desenvolvimento dos músculos do peitoral maior e peitoral 
+                                menor. Um treino de peito ajuda a fortalecer os músculos do tórax, melhorar
+                                 a postura, aumentar a estabilidade dos ombros e proporcionar uma aparência física mais definida. </p>
+
+                            <h2>Flexões</h2>
+                           <img src="gif/peito/flexoes.gif" width="50%" class="imagemr" alt="imagasem peito">
+                           
+                            <p>Primeiramente, junte todos os ingredientes em um recipiente e bata com a ajuda de um garfo. Em seguida, é só despejar a mistura em uma frigideira antiaderente e virar quando a parte de baixo soltar. Assim, ao dourar, dá para rechear ao seu gosto como por exemplo colocar uma protéina como frango, carne e depois servir.</p>
+                        </div>
+                    </section>
+
+
+
+
+    </main>
+
+    <footer class="Contato" id="contato">
+        <div class="Contatos">
+            <p>Entre em contato conosco <br>Email: <span class="laranja">gymacademy2023@gmail.com</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
