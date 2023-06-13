@@ -204,7 +204,7 @@ header {
     width: 100%;
     padding: 300px 20px;
     /* background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, rgba(255, 66, 0, 0.2) 86.28%), url(img/header.jpg) no-repeat center; */
-    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/headertreino.jpg) no-repeat center;
+    background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, var(--corimgheader)), url(img/headertreinopoo.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -262,6 +262,48 @@ header {
     color: var(--laranja);
     text-align: center;
 }
+
+#exercicios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 50px; /* Apenas para criar espaço para a demonstração */
+  }
+  
+  #links-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #links-container a {
+    margin: 0 10px;
+  }
+  
+  .grupo-exercicio {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .grupo-exercicio h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .grupo-exercicio a {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .mostrar {
+    display: block !important;
+  }
 
 /* ------------ section informações --------------------- */
 
@@ -333,6 +375,11 @@ footer{
 /* ------------ tablet ------------ */
 @media (max-width: 977px) {
 
+    #exercicios-container {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
     .container {
         width: 100%;
     }
@@ -347,7 +394,13 @@ footer{
 /* ------------ celular ------------ */
 @media (max-width: 700px) {
 
+    #exercicios-container {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
     /* menu */
+
     .menuprincipal h1 {
         font-size: 20px;
     }
