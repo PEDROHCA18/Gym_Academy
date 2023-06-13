@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="biotipo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Biotipo</title>
+</head>
+<header> 
+    
+     <h1 class="titulo" ><span class="laranja">GYM</span> ACADEMY</h1>
+     
+      <nav class="navbar">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        
+        <a href="#inicio" class="active">INÍCIO</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#informacoes">BIOTIPO</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+      </header>
+
+    
+    <script> 
+      let menus = document.querySelector(".navbar");
+let menus_btn = document.querySelector(".menu-btn");
+let close_btn = document.querySelector(".close-btn");
+
+menus_btn.addEventListener("click", function () {
+  menus.classList.add("active2");
+});
+
+close_btn.addEventListener("click", function () {
+  menus.classList.remove("active2");
+});
+    </script>
+
+        <section class="inicio container-fluid" id="inicio">
+
+            <div class="container">
+                <h2>Venha conheçer <br>os diferentes tipos de</h2>
+                <h1>BIOTIPO</h1>
+                <a href="">COMEÇAR AGORA</a>
+                
+            </div>
+
+        </section>
+    
+
+    <main>
+        <section class="container" id="sobre">
+            <h1 class="h1-principal-laranja">Oque é Biotipo?</h1>
+        <div class="row">
+                
+                <div class="col-6">
+                    <img class="imagembiotipo" src="img/informação sobre biotipo.webp" width="110%" alt="imagem de um homem segurando pesos">
+                </div>
+      <div class="col-6 sobre-conteudo">
+                    <p>O biotipo corporal corresponde ao modelo de corpo, que é influenciado pela constituição óssea. metabolismo, massa muscular e quantidade de gordura. De acordo com essas características, é possível classifica-lo em: Ectomorfo, Endomorfo E Mesomorfo.</p>
+                    <P>Com base nisso separamos algumas informações para você identificar seu biotipo e algumas dicas de como evoluir de acordo com o próprio</P>
+                </div>
+            </div>
+                     
+       </section>
+    
+        <section class="container-fluid" id="informacoes">
+            <div class="container">
+                <h1 class="h1-principal-branco">Tipos de biotipo e suas definições</h1>
+
+                <div class="row">
+                    <div class="col-7">
+                        <div class="card">
+                            <img src="img/endomorfo-malhando.jpg" width="50%" alt="imagem de uma Crepioca">
+                            <h2>ENDOMORFO</h2>
+                            <h3>Como identificar:</h3>
+                            <p>Os indivíduos endomorfos têm uma estrutura física mais arredondada e geralmente carregam mais gordura corporal. Eles tendem a ter uma cintura mais larga, quadris e coxas mais cheios, além de uma maior tendência a ganhar peso.</p>
+                            <h3>Dicas de como evoluir:</h3>
+                            <p>1 - Nutrição: Concentre-se em uma dieta balanceada com ênfase na ingestão de calorias controlada. Limite a ingestão de gorduras saturadas e carboidratos simples. Aumente a ingestão de fibras e proteínas magras.
+                            <br> 2 - Treinamento de força: Realize treinamentos de alta intensidade para estimular o metabolismo e promover a queima de gordura. Combine exercícios aeróbicos com treinamento de força.
+                            <br> 3 - Cardiovascular: Dê prioridade a exercícios cardiovasculares para auxiliar na perda de gordura e melhorar a saúde cardiovascular</p>
+
+                            <img src="img/mesomorfo-malhando.webp" width="50%" alt="imagem de uma Crepioca">
+                            <h2>MESOMORFO</h2>
+                            <h3>Como identificar:</h3>
+                            <p>Os mesomorfos têm uma estrutura física atlética e musculosa. Eles tendem a ter ombros largos, cintura estreita e uma facilidade natural para ganhar massa muscular. Os mesomorfos geralmente têm níveis de gordura corporal moderados.</p>
+                            <h3>Dicas de como evoluir:</h3>
+                            <p>1 - Nutrição: Mantenha uma dieta equilibrada, com quantidade adequada de calorias para manter o peso corporal ideal. Priorize a ingestão de proteínas magras e carboidratos complexos.
+                            <br> 2 - Treinamento de força: Realize uma combinação de exercícios compostos e isolados para desenvolver simetricamente os músculos. Varie a intensidade e o volume do treinamento para promover a progressão.
+                            <br> 3 - Cardiovascular: Adicione exercícios cardiovasculares para manter a saúde cardiovascular e promover a queima de gordura.</p>
+
+                            <img src="img/ectomorfo-malhando.webp" width="50%" alt="imagem de uma Crepioca">
+                            <h2>ECTOMORFO</h2>
+                            <h3>Como identificar:</h3>
+                            <p>Os indivíduos ectomorfos são geralmente caracterizados por corpos mais magros, com estrutura óssea fina, ombros estreitos, pouca gordura corporal e músculos menos desenvolvidos. Eles podem ter dificuldade em ganhar peso e masa muscular.</p>
+                            <h3>Dicas de como evoluir:</h3>
+                            <p>1 - Nutrição: Consuma uma quantidade adequada de calorias para atender às necessidades de energia e promover o ganho de massa muscular. Aumente a ingestão de proteínas para auxiliar na recuperação muscular.
+                            <br> 2 - Treinamento de força: Concentre-se em exercícios compostos e use pesos mais pesados com menos repetições para estimular o crescimento muscular. Priorize o treinamento de resistência para aumentar a força geral.
+                            <br> 3 - Descanso: Garanta uma quantidade adequada de descanso e recuperação para permitir que o corpo se recupere e cresça.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="Contato" id="contato">
+        <div class="Contatos">
+            <p>Entre em contato conosco <br>Email: <span class="laranja">gymacademy2023@gmail.com</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
